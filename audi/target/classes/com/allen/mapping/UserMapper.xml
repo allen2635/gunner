@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.allen.dao.IUserDao">
+
+    <resultMap id="userMap" type="com.allen.model.User">
+
+        <id property="id" column="id" javaType="java.lang.Integer"/>
+        <result property="username" column="username" javaType="java.lang.String"/>
+        <result property="password" column="password" javaType="java.lang.String"/>
+        <result property="age" column="age" javaType="java.lang.Integer"/>
+        <result property="nickname" column="nickname" javaType="java.lang.String"/>
+    </resultMap>
+
+
+    <insert id="insertUser" useGeneratedKeys="true" keyProperty="id">
+        insert into member (username,password,age,nickname) values (#{username},#{password},#{age},#{nickname})
+    </insert>
+
+    <update id="updateUser">
+        update member set username=#{username},password=#{password},age=#{age},nickname=#{nickname} where id=#{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from member where id=#{id}
+    </delete>
+
+    <select id="queryUser" parameterType="int" resultMap="userMap">
+        select * from member where id=#{id}
+    </select>
+
+    <select id="queryAllUser" resultMap="userMap">
+        select * from member
+    </select>
+</mapper>
