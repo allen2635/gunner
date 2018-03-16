@@ -1,8 +1,9 @@
-E:\audi\src\main\java\com\allen\dao\IUserDao.java
-E:\audi\src\main\java\com\allen\model\User.java
-E:\audi\src\main\java\com\allen\service\IUserService.java
-E:\audi\src\main\java\com\allen\controller\UserController.java
-E:\audi\src\main\java\com\allen\model\Result.java
-E:\audi\src\main\java\com\allen\service\impl\UserServiceImpl.java
-E:\audi\src\main\java\com\allen\util\GsonUtils.java
-E:\audi\src\main\java\com\allen\util\HttpRequestUtil.java
+E:\gunner\audi\src\main\java\com\allen\util\HttpRequestUtil.java
+E:\gunner\audi\src\main\java\com\allen\service\IUserService.java
+E:\gunner\audi\src\main\java\com\allen\model\Result.java
+E:\gunner\audi\src\main\java\com\allen\service\impl\UserServiceImpl.java
+E:\gunner\audi\src\main\java\com\allen\util\HttpParameter.java
+E:\gunner\audi\src\main\java\com\allen\controller\UserController.java
+E:\gunner\audi\src\main\java\com\allen\dao\IUserDao.java
+E:\gunner\audi\src\main\java\com\allen\model\User.java
+E:\gunner\audi\src\main\java\com\allen\util\GsonUtils.java

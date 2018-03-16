@@ -6,6 +6,14 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 @JsonIgnoreProperties({"password"})
 public class User {
 
+    public int getUserid() {
+        return userid;
+    }
+
+    public void setUserid(int userid) {
+        this.userid = userid;
+    }
+
     public interface WithoutPasswordView {
     }
 
@@ -15,6 +23,7 @@ public class User {
     private String password;
     private int age;
     private String nickname;
+    private int userid;
 
     public int getId() {
         return id;
@@ -54,16 +63,6 @@ public class User {
 
     public void setNickname(String nickname) {
         this.nickname = nickname;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", age=" + age +
-                ", nickname='" + nickname + '\'' +
-                '}';
     }
 
 }

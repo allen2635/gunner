@@ -13,8 +13,12 @@ public class UserServiceImpl implements IUserService {
     @Resource
     private IUserDao userDao;
 
-    public User queryUser(int id) {
-        return userDao.queryUser(id);
+    public User queryUserById(int id) {
+        return userDao.queryUserById(id);
+    }
+
+    public User queryUser(String username, String password) {
+        return userDao.queryUser(username, password);
     }
 
     public int insertUser(User user) {

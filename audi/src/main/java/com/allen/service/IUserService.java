@@ -4,7 +4,9 @@ import com.allen.model.User;
 
 public interface IUserService {
 
-    User queryUser(int id);
+    User queryUserById(int id);
+
+    User queryUser(String username, String password);
 
     int insertUser(User user);
 

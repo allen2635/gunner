@@ -9,6 +9,7 @@
         <result property="password" column="password" javaType="java.lang.String"/>
         <result property="age" column="age" javaType="java.lang.Integer"/>
         <result property="nickname" column="nickname" javaType="java.lang.String"/>
+        <result property="userid" column="userid" javaType="java.lang.Integer"/>
     </resultMap>
 
 
@@ -24,8 +25,12 @@
         delete from member where id=#{id}
     </delete>
 
-    <select id="queryUser" parameterType="int" resultMap="userMap">
+    <select id="queryUserById" parameterType="int" resultMap="userMap">
         select * from member where id=#{id}
+    </select>
+
+    <select id="queryUser" parameterType="String" resultMap="userMap">
+        select * from member where username=#{0} AND password=#{1}
     </select>
 
     <select id="queryAllUser" resultMap="userMap">
